@@ -1,0 +1,21 @@
+Fri Sep 24 01:45:03 2021
+ERROR: Expired activation key
+
+Fri Sep 24 01:45:03 2021
+ERROR: Expired activation key
+
+Fri Sep 24 01:45:03 2021
+ERROR: Expired activation key
+
+Fri Sep 24 01:45:03 2021
+ERROR: Expired activation key
+
+Sat Sep 25 13:03:10 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Sat Sep 25 13:03:41 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Sat Sep 25 13:05:26 2021
+ERROR: GLEW initalization error: Missing GL version
+
