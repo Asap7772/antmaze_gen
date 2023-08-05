@@ -5,6 +5,7 @@ import h5py
 import argparse
 from d4rl.locomotion import maze_env, ant, swimmer
 from d4rl.locomotion.wrappers import NormalizedBoxEnv
+
 from rlkit.torch.pytorch_util import set_gpu_mode
 import torch
 import skvideo.io

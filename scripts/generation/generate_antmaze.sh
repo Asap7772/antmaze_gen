@@ -1,0 +1,5 @@
+python /home/asap7772/kun2/antmaze_gen/scripts/generation/generate_ant_maze_datasets.py --maze=medium_test --noisy --num_samples=100000 --policy_file /home/asap7772/kun2/antmaze_gen/d4rl/ant_hierarch_pol.pkl
+python /home/asap7772/kun2/antmaze_gen/scripts/generation/generate_ant_maze_datasets.py --maze=large_test --noisy --num_samples=100000 --policy_file /home/asap7772/kun2/antmaze_gen/d4rl/ant_hierarch_pol.pkl
+
+python /home/asap7772/kun2/antmaze_gen/scripts/generation/generate_ant_maze_datasets.py --maze=medium_test --noisy --num_samples=100000 --multi_start --policy_file /home/asap7772/kun2/antmaze_gen/d4rl/ant_hierarch_pol.pkl
+python /home/asap7772/kun2/antmaze_gen/scripts/generation/generate_ant_maze_datasets.py --maze=large_test --noisy --num_samples=100000 --multi_start --policy_file /home/asap7772/kun2/antmaze_gen/d4rl/ant_hierarch_pol.pkl

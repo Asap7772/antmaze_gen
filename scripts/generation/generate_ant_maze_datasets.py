@@ -81,6 +81,12 @@ def main():
         maze = maze_env.BIG_MAZE_EVAL
     elif args.maze == 'large_eval':
         maze = maze_env.HARDEST_MAZE_EVAL
+    elif args.maze == 'umaze_test':
+        maze = maze_env.U_MAZE_TEST
+    elif args.maze == 'medium_test':
+        maze = maze_env.BIG_MAZE_TEST
+    elif args.maze == 'large_test':
+        maze = maze_env.HARDEST_MAZE_TEST
     else:
         raise NotImplementedError
     

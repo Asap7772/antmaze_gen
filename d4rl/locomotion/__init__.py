@@ -414,7 +414,77 @@ register(
         'maze_map': maze_env.HARDEST_MAZE_TEST,
         'reward_type':'sparse',
         'dataset_url':'http://rail.eecs.berkeley.edu/datasets/offline_rl/ant_maze_v2/Ant_maze_hardest-maze_noisy_multistart_True_multigoal_False_sparse_fixed.hdf5',
-        'non_zero_reset':False, 
+        'non_zero_reset':False,
+        'eval':True,
+        'maze_size_scaling': 4.0,
+        'ref_min_score': 0.0,
+        'ref_max_score': 1.0,
+        'v2_resets': True,
+    }
+)
+
+# adding ReDS Environments.
+register(
+    id='antmaze-medium-noisy-v2',
+    entry_point='d4rl.locomotion.ant:make_ant_maze_env',
+    max_episode_steps=1000,
+    kwargs={
+        'maze_map': maze_env.BIG_MAZE_TEST,
+        'reward_type':'sparse',
+        'dataset_url':'https://storage.googleapis.com/heterogeneous_data/Antmaze_big-maze_biased_True_multigoal_False_new_relabel_75sparse.hdf5',
+        'non_zero_reset':False,
+        'eval':True,
+        'maze_size_scaling': 4.0,
+        'ref_min_score': 0.0,
+        'ref_max_score': 1.0,
+        'v2_resets': True,
+    }
+)
+
+register(
+    id='antmaze-large-noisy-v2',
+    entry_point='d4rl.locomotion.ant:make_ant_maze_env',
+    max_episode_steps=1000,
+    kwargs={
+        'maze_map': maze_env.HARDEST_MAZE_TEST,
+        'reward_type':'sparse',
+        'dataset_url':'https://storage.googleapis.com/heterogeneous_data/Antmaze_hardest-maze_biased_True_multigoal_False_new_relabelsparse.hdf5',
+        'non_zero_reset':False,
+        'eval':True,
+        'maze_size_scaling': 4.0,
+        'ref_min_score': 0.0,
+        'ref_max_score': 1.0,
+        'v2_resets': True,
+    }
+)
+
+register(
+    id='antmaze-medium-biased-v2',
+    entry_point='d4rl.locomotion.ant:make_ant_maze_env',
+    max_episode_steps=1000,
+    kwargs={
+        'maze_map': maze_env.BIG_MAZE_TEST,
+        'reward_type':'sparse',
+        'dataset_url':'https://storage.googleapis.com/heterogeneous_data/Antmaze_big-maze_biased_True_multigoal_False_new_larger_bias_relabelsparse.hdf5',
+        'non_zero_reset':False,
+        'eval':True,
+        'maze_size_scaling': 4.0,
+        'ref_min_score': 0.0,
+        'ref_max_score': 1.0,
+        'v2_resets': True,
+    }
+)
+
+
+register(
+    id='antmaze-large-biased-v2',
+    entry_point='d4rl.locomotion.ant:make_ant_maze_env',
+    max_episode_steps=1000,
+    kwargs={
+        'maze_map': maze_env.HARDEST_MAZE_TEST,
+        'reward_type':'sparse',
+        'dataset_url':'https://storage.googleapis.com/heterogeneous_data/Antmaze_hardest-maze_biased_True_multigoal_False_new_larger_bias_relabelsparse.hdf5',
+        'non_zero_reset':False,
         'eval':True,
         'maze_size_scaling': 4.0,
         'ref_min_score': 0.0,

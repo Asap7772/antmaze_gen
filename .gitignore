@@ -128,3 +128,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# generated dataset
+d4rl/gen_datasets_jan22
