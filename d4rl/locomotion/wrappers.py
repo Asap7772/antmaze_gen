@@ -153,8 +153,12 @@ class NormalizedBoxEnv(ProxyEnv):
         return (obs - self._obs_mean) / (self._obs_std + 1e-8)
 
     def step(self, action):
+        if isinstance(action, list) and len(action) == 1:
+            action = action[0]
+
         lb = self._wrapped_env.action_space.low
         ub = self._wrapped_env.action_space.high
+
         scaled_action = lb + (action + 1.) * 0.5 * (ub - lb)
         scaled_action = np.clip(scaled_action, lb, ub)
 
