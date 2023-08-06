@@ -111,3 +111,42 @@ Please use the following bibtex for citations:
 Unless otherwise noted, all datasets are licensed under the [Creative Commons Attribution 4.0 License (CC BY)](https://creativecommons.org/licenses/by/4.0/), and code is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html).
 
 
+# D4RL installation
+If you are using *Ubuntu* and have not got *d4rl* installed yet, this section may help
+
+1. Download mujoco
+
+	I am using mujoco210. It can be downloaded from https://github.com/deepmind/mujoco/releases/download/2.1.0/mujoco210-linux-x86_64.tar.gz
+   ```
+   mkdir .mujoco
+   mv mujoco210-linux-x86_64.tar.gz .mujoco
+   cd .mujoco
+   tar -xvzf mujoco210-linux-x86_64.tar.gz
+   ```
+
+    Then, add mujoco path:
+
+	Open .bashrc file and add the following line:
+	```
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<Your_path>/.mujoco/mujoco210/bin
+    ```
+
+	Save the change and run the following command:
+	```
+    source .bashrc
+    ```
+	
+2. Install other packages and D4RL
+    ```
+    pip install mujoco_py
+    pip install dm_control==1.0.7
+    pip install git+https://github.com/Farama-Foundation/d4rl@master#egg=d4rl
+    ```
+	
+3. Test the installation in python
+    ```
+       import gym
+       import d4rl
+       env = gym.make('maze2d-umaze-v1')
+       env.get_dataset()	   
+   ```
